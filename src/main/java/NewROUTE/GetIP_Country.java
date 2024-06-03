@@ -7,6 +7,10 @@ select get_country('59.46.69.66');
  */
 public class GetIP_Country extends GetIP_Info {
     public String evaluate(String ip) throws Exception{
-        return this.GetInfo(ip, 0);
+        try {
+            return this.GetInfo(ip, 0);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
     }
 }

@@ -8,6 +8,10 @@ select get_isp('59.46.69.66');
 
 public class GetIP_ISP extends GetIP_Info {
     public String evaluate(String ip) throws Exception{
-        return this.GetInfo(ip, 4);
+        try {
+            return this.GetInfo(ip, 4);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
     }
 }

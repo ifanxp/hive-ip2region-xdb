@@ -8,6 +8,10 @@ select get_city('59.46.69.66');
 public class GetIP_City extends GetIP_Info {
 
     public String evaluate(String ip) throws Exception{
-        return this.GetInfo(ip, 3);
+        try {
+            return this.GetInfo(ip, 3);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
     }
 }
