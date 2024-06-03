@@ -9,11 +9,6 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /*
-hdfs dfs -rm /user/irsuser/ip2region/hive-udf-ip2region-jar-with-dependencies.jar
-hdfs dfs -put hive-udf-ip2region-jar-with-dependencies.jar /user/irsuser/ip2region/
-
-hive -hiveconf hive.root.logger=INFO,console
-
 create temporary function get_info as 'NewROUTE.GetIP_Info' using jar 'hdfs://nameservice1/user/irsuser/ip2region/hive-udf-ip2region.jar';
 select get_info('59.46.69.66');
 输出：中国|0|辽宁省|沈阳市|电信
